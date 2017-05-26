@@ -2902,7 +2902,9 @@ void Cavity_Application::describeSimulation() {
                     }
                 }
             }
-            egsInformation("  density of cavity medium = %g g/cm3\n",Rho[j]);
+            if(Rho) {
+                egsInformation("  density of cavity medium = %g g/cm3\n",Rho[j]);
+            }
         }
     }
     egsInformation("=============================================\n");
