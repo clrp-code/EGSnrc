@@ -2591,7 +2591,7 @@ int Cavity_Application::initScoring() {
                 if( !muen_data ){
                     egsFatal(
                   "\n\n***  Failed to open muen file %s\n"
-                      "     This is a fatal error\n");
+                      "     This is a fatal error\n",muen_file.c_str());
                 }
                 int ndat; muen_data >> ndat;
                 if( ndat < 2 || muen_data.fail() ) egsFatal(
